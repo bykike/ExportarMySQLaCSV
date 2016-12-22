@@ -1,16 +1,16 @@
 <?php
-    // mysql database connection details
+    // Detalles de conexión a la base de datos
     $host = "localhost";
     $username = "root";
     $password = "root";
     $dbname = "BDRRHH";
 
-    // open connection to mysql database
+    // Conectamos a la base de datos
     $connection = mysqli_connect($host, $username, $password, $dbname) or die("Connection Error " . mysqli_error($connection));
 
     $tildes = $connection->query("SET NAMES 'utf8'");
 
-    // fetch mysql table rows
+    // extraemos los datos
     $sql = "select * from BDAltasCandi";
     $result = mysqli_query($connection, $sql) or die("Selection Error " . mysqli_error($connection));
 
@@ -23,6 +23,6 @@
     
     fclose($fp);
 
-    //close the db connection
+    //cerramos conexión
     mysqli_close($connection);
 ?>
