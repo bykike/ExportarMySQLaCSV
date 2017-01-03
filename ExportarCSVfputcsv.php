@@ -12,7 +12,7 @@
 
     //$tildes = $connection->query("SET NAMES 'utf8'");
 
-    // extraemos los datos
+    // Extraemos los datos
 
     $sql = "select * from BDAltasCandi";
     $result = mysqli_query($connection, $sql) or die("Selection Error " . mysqli_error($connection));
@@ -26,7 +26,7 @@
     
     fclose($fp);
 
-    //cerramos conexión
+    // Cerramos conexión
 
     mysqli_close($connection);
 ?>
